@@ -10,6 +10,7 @@ client:on("ready", function()
 end)
 
 client:on("messageCreate", function(message)
+	math.randomseed(os.time() * math.random(99999999999999))
 	if message.author.id == client.user.id then
 		return
 	end
@@ -22,6 +23,12 @@ client:on("messageCreate", function(message)
 			return
 		end
 	end
+		math.randomseed(os.time() * math.random(99999999999999))
+		math.randomseed(os.time() * math.random(99999999999999))
+		math.randomseed(os.time() * math.random(99999999999999))
+		math.randomseed(os.time() * math.random(99999999999999))
+		math.randomseed(os.time() * math.random(99999999999999))
+		math.randomseed(os.time() * math.random(99999999999999))
 	if not _G.larkov.speaking then
 		return
 	end
@@ -48,6 +55,7 @@ client:on("messageCreate", function(message)
 end)
 
 function bot.getWillReply(message)
+	math.randomseed(os.time() * math.random(99999999999999))
 	local chance = math.floor(math.random() * 100) + 1
 	local willReply = chance <= _G.larkov.replyRate
 	
@@ -55,6 +63,7 @@ function bot.getWillReply(message)
 end
 
 function bot.reply(message)
+	math.randomseed(os.time() * math.random(99999999999999))
 	local message_ = message.content:lower()
 	local words = utility.splitWords(message_)
 	local knownWords = dictionary.getKnownWords(words)
@@ -72,8 +81,13 @@ function bot.reply(message)
 		print("ye")
 		return
 	end
-	
+	math.randomseed(os.time() * math.random(99999999999999))
 	local finalSentence = dictionary.buildAround(buildAroundWord)
+	math.randomseed(os.time() * math.random(99999999999999))
+	math.randomseed(os.time() * math.random(99999999999999))
+	math.randomseed(os.time() * math.random(99999999999999))
+	
+	math.randomseed(os.time() * math.random(99999999999999))
 	if finalSentence == "  " then
 		return
 	end 
